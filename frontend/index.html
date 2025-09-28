@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Premium Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Insurance Premium Prediction</h1>
+        <form id="prediction-form">
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" step="0.1" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Height (m)</label>
+                <input type="number" id="height" name="height" step="0.01" min="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="income_lpa">Income (LPA)</label>
+                <input type="number" id="income_lpa" name="income_lpa" step="0.1" min="0.1" required>
+            </div>
+            <div class="form-group">
+                <label for="smoker">Smoker</label>
+                <input type="checkbox" id="smoker" name="smoker">
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Occupation</label>
+                <select id="occupation" name="occupation" required>
+                    <option value="retired">Retired</option>
+                    <option value="freelancer">Freelancer</option>
+                    <option value="business_owner">Business Owner</option>
+                    <option value="student">Student</option>
+                    <option value="government_job">Government Job</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="private_job">Private Job</option>
+                </select>
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
